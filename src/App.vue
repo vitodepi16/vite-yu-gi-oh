@@ -4,7 +4,7 @@
       <HeaderComponent />
     </header>
     <main>
-      <MainComponent/>
+      <MainComponent />
     </main>
   </div>
 </template>
@@ -13,13 +13,13 @@
 import axios from "axios";
 import { store } from "../data/store.js";
 import HeaderComponent from "./components/HeaderComponent.vue";
-import MainComponent from './components/MainComponent.vue'
+import MainComponent from "./components/MainComponent.vue";
 
 export default {
   name: "App",
   components: {
-    HeaderComponent,MainComponent
-    
+    HeaderComponent,
+    MainComponent,
   },
   data() {
     return {
@@ -29,8 +29,10 @@ export default {
   methods: {
     getCard() {
       const url = store.baseUrl + store.endPoint;
-      axios.get(url).then((res) => { console.log(res.data );
-      store.cardList = res.data });
+      axios.get(url).then((res) => {
+        console.log(res.data.data);
+        store.cardList = res.data.data;
+      });
     },
   },
   mounted() {
