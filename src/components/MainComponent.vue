@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-3">
+  <div class="container p-4">
     <div class="row">
       <CardComponent
         v-for="card in store.cardList"
