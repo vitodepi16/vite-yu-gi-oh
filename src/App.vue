@@ -4,7 +4,7 @@
       <HeaderComponent />
     </header>
     <main>
-      <SelectComponent @Filter="getCard()" />
+      <SelectComponent @filter="getCard()" />
       <MainComponent />
     </main>
   </div>
@@ -50,7 +50,7 @@ export default {
     },
   },
   mounted() {
-    store.endPoint = "cardinfo.php?num=50&offset=0";
+    store.endPoint = "cardinfo.php?num=1000&offset=0";
     this.getCard();
   },
 };
