@@ -29,5 +29,6 @@ img {
 }
 .card {
   background-color: white;
+  cursor: pointer;
 }
 </style>

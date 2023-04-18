@@ -29,8 +29,19 @@ export default {
   methods: {
     getCard() {
       const url = store.baseUrl + store.endPoint;
-      axios.get(url).then((res) => {
-        console.log(res.data.data);
+      let options = {};
+      let params = {};
+      for (let key in store.filter) {
+        if (store.filter[key]) {
+          params[key] = store.filter[key];
+        }
+      }
+
+      if (Object.keys(params).length > 0) {
+        options.params = params;
+      }
+
+      axios.get(url, options).then((res) => {
         store.cardList = res.data.data;
       });
     },
