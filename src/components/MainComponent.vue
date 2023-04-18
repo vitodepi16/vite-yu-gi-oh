@@ -1,6 +1,5 @@
 <template>
   <div class="container p-4">
-    <SelectComponent />
     <div class="row">
       <CardComponent
         v-for="card in store.cardList"
@@ -13,13 +12,12 @@
 
 <script>
 import { store } from "../../data/store";
-import SelectComponent from "../components/SelectComponent.vue";
+
 import CardComponent from "../components/CardComponent.vue";
 export default {
   name: "MainComponent",
   components: {
     CardComponent,
-    SelectComponent,
   },
   data() {
     return {

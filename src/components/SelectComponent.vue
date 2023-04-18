@@ -31,6 +31,7 @@ export default {
   },
   methods: {
     changetype() {
+      this.$emit("Filter");
       console.log(store.filter);
     },
   },
