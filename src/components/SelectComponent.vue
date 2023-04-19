@@ -6,7 +6,7 @@
       aria-label=""
       v-model="store.filter.archetype"
     >
-      <option selected value="">Choose....</option>
+      <option selected value="">All</option>
       <option
         v-for="(archetype, index) in statusOptions"
         :key="index"
